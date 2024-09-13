@@ -11,10 +11,7 @@ import Gallery from "@/components/HomePage/Gallery";
 import { LandingHowItWorks } from "@/components/HomePage/LandingHowItWorks";
 import { LandingPainPoints } from "@/components/HomePage/LandingPainPoints";
 import TestimonialCard from "@/components/testimonials/TestimonialCard";
-import useGetAllCommunity from "@/hooks/useGetAllCommunity";
-import useGetAllFeedbacks from "@/hooks/useGetAllFeedbacks";
-import useGetAllApprovedEvents from "@/hooks/useGetAllApprovedEvents";
-import useGetAllAlumni from "@/hooks/useGetAllAlumni";
+
 import Footer from "../components/Footer/Footer";
 import Banner from "@atlaskit/banner";
 import { Fade } from "react-awesome-reveal";
@@ -58,10 +55,7 @@ const steps = [
 ];
 
 function Home() {
-	useGetAllCommunity();
-	useGetAllFeedbacks();
-	useGetAllApprovedEvents();
-	useGetAllAlumni();
+	
 
 	const { feedbacks } = useSelector((state) => state.feedback);
 	const [testimonials, setTestimonials] = useState(feedbacks);

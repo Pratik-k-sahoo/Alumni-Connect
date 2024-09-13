@@ -38,6 +38,10 @@ import Alumni_directory from "./pages/alumni _directory/Alumni_directory";
 import CommunityHub from "./pages/community/CommunityHub";
 import AddCommunity from "./pages/community/AddCommunity";
 import Donation from "./pages/donation/Donation";
+import useGetAllCommunity from "@/hooks/useGetAllCommunity";
+import useGetAllFeedbacks from "@/hooks/useGetAllFeedbacks";
+import useGetAllApprovedEvents from "@/hooks/useGetAllApprovedEvents";
+import useGetAllAlumni from "@/hooks/useGetAllAlumni";
 
 const router = createBrowserRouter([
 	{
@@ -184,6 +188,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+    useGetAllCommunity();
+	useGetAllFeedbacks();
+	useGetAllApprovedEvents();
+	useGetAllAlumni();
 	const { user } = useSelector((state) => state.auth);
 	const dispatch = useDispatch();
 
