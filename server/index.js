@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-	origin: "https://my-alumni-pratikksahoos-projects.vercel.app",
+	origin: "https://my-alumni-31t1l7sx3-pratikksahoos-projects.vercel.app",
 	credentials: true,
 };
 app.use(cors(corsOptions));
