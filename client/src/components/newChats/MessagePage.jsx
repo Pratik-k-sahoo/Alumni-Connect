@@ -82,7 +82,7 @@ const MessagePage = () => {
 	};
 
 	useEffect(() => {
-		if (socket) {
+		if (user && socket) {
 			socket.emit("message-page", id);
 
 			socket.on("message-user", (data) => {
@@ -92,7 +92,8 @@ const MessagePage = () => {
 				setAllMessage(data);
 			});
 		}
-	}, [id]);
+        console.log("All messages set", allMessage);
+	}, [id, user]);
 
 	useEffect(() => {
 		if (currentMsg) {
