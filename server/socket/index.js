@@ -59,6 +59,7 @@ io.on("connection", async (socket) => {
 				options: { sort: { created_at: -1 } },
 			});
 			socket.emit("message", chats?.messages);
+            console.log(chats?.messages);            
         }
 	});
 
