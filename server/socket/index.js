@@ -11,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
-		origin: "https://my-alumni-31t1l7sx3-pratikksahoos-projects.vercel.app",
+		origin: "https://my-alumni.vercel.app/",
 		credential: true,
 	},
 });
