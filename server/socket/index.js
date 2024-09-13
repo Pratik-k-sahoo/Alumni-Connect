@@ -29,6 +29,9 @@ io.on("connection", async (socket) => {
 		user = response.user;
 	}
 
+    console.log("Response", response);
+    
+
     console.log("User", user);    
 
 	socket.join(user?._id?.toString());
