@@ -16,10 +16,9 @@ export default defineConfig({
 				target: "https://hackerwar-be.onrender.com",
 				changeOrigin: true,
 			},
-			"/io": {
+			"/socket.io": {
 				target: "https://hackerwar-be.onrender.com",
 				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/io/, ""),
 			},
 		},
 	},
