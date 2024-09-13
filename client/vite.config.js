@@ -10,4 +10,17 @@ export default defineConfig({
 			"@": path.resolve(__dirname, "./src"),
 		},
 	},
+	server: {
+		proxy: {
+			"/api": {
+				target: "https://vercel-hackerwar.vercel.app",
+				changeOrigin: true,
+			},
+			"/io": {
+				target: "https://vercel-hackerwar.vercel.app",
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/io/, ""),
+			},
+		},
+	},
 });
