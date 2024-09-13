@@ -95,9 +95,9 @@ const Chat = () => {
 							!basePath && "w-full h-full"
 						}`}
 					>
+                        <Outlet />
 					</div>
 				)}
-                <Outlet />
 			</div>
             <Footer />
 		</>
