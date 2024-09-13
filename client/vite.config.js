@@ -13,11 +13,11 @@ export default defineConfig({
 	server: {
 		proxy: {
 			"/api": {
-				target: "https://vercel-hackerwar.vercel.app",
+				target: "https://hackerwar-be.onrender.com",
 				changeOrigin: true,
 			},
 			"/io": {
-				target: "https://vercel-hackerwar.vercel.app",
+				target: "https://hackerwar-be.onrender.com",
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/io/, ""),
 			},
