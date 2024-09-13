@@ -137,10 +137,10 @@ export const login = async (req, res) => {
 		});
 
 		const cookieOptions = {
-			https: true,
-			secure: true,
-			sameSite: "None",
-			domain: "my-alumni.vercel.app",
+			httpOnly: true, // Ensures cookie is only accessible by the server
+			secure: true, // Ensures cookie is only sent over HTTPS
+			sameSite: "None", // Required for cross-origin requests
+			path: "/",
 		};
 
 		return res
