@@ -137,8 +137,9 @@ export const login = async (req, res) => {
 		});
 
 		const cookieOptions = {
-			http: true,
+			https: true,
 			secure: true,
+            sameSite: 'None'
 		};
 
 		return res
