@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-	origin: "/",
+	origin: "https://my-alumni-pratikksahoos-projects.vercel.app",
 	credentials: true,
 };
 app.use(cors(corsOptions));
@@ -36,7 +36,7 @@ app.use(cors(corsOptions));
 // 	res.send("API is running...");
 // });
 app.get("/", (req, res) => {
-    res.send("Hello");
+	res.send("Hello");
 });
 
 app.use("/api/v1/user", userRoute);
@@ -47,7 +47,6 @@ app.use("/api/v1/alumni", alumniRoute);
 app.use("/api/v1/post", postRoute);
 app.use("/api/v1/feedback", feedbackRoute);
 app.use("/api/v1/community", communityRoute);
-
 
 server.listen(PORT, () => {
 	connectDB();
