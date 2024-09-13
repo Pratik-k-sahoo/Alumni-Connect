@@ -92,7 +92,7 @@ const MessagePage = () => {
 				setAllMessage(data);
 			});
 		}
-	}, []);
+	}, [id]);
 
 	useEffect(() => {
 		if (currentMsg) {
@@ -140,6 +140,9 @@ const MessagePage = () => {
 			<div className="border-b-2 border-gray-800 mt-1"></div>
 
 			{/* Show all message */}
+            {
+                console.log(allMessage)                
+            }
 			<div className="bg-indigo-200 h-[calc(100vh-215px)]  overflow-y-auto">
 				<div className="flex flex-col gap-2 py-5 mx-2" ref={currentMsg}>
 					{allMessage?.map((msg, index) =>
