@@ -92,7 +92,7 @@ const MessagePage = () => {
 				setAllMessage(data);
 			});
 		}
-	}, [id]);
+	}, []);
 
 	useEffect(() => {
 		if (currentMsg) {
