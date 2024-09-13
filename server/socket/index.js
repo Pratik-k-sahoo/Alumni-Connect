@@ -29,6 +29,8 @@ io.on("connection", async (socket) => {
 		user = response.user;
 	}
 
+    console.log("User", user);    
+
 	socket.join(user?._id?.toString());
 	onlineUser.add(user?._id?.toString());
 
@@ -60,6 +62,8 @@ io.on("connection", async (socket) => {
 			});
 			socket.emit("message", chats?.messages);
 
+            console.log("data", data);
+            
             console.log(chats);            
             console.log(chats?.messages);            
         }
