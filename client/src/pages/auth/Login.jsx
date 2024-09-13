@@ -60,6 +60,7 @@ const Login = () => {
           }
         }
         dispatch(login(user));
+        localStorage.setItem("token", response.data.token);
         navigate("/");
       }
     } catch (error) {

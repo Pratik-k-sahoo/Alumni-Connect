@@ -14,8 +14,8 @@ export const register = async (req, res) => {
 			redgNo,
 			graduation_year,
 			profileImage,
-            programme,
-            department,
+			programme,
+			department,
 			resume,
 		} = req.body;
 		let password = req.body.password;
@@ -28,8 +28,8 @@ export const register = async (req, res) => {
 			!bio ||
 			!redgNo ||
 			!graduation_year ||
-            !programme ||
-            !department
+			!programme ||
+			!department
 		) {
 			return res.status(400).json({
 				message: "Something is missing.",
@@ -45,7 +45,7 @@ export const register = async (req, res) => {
 			});
 		}
 		const hashedPassword = await bcrypt.hash(password, 10);
-        const branch = programme + " " + department;
+		const branch = programme + " " + department;
 		user = await UserModel.create({
 			fullname,
 			email,
@@ -151,6 +151,7 @@ export const login = async (req, res) => {
 				success: true,
 				user,
 				alumni,
+				token,
 			});
 	} catch (error) {
 		return res.status(500).json({
@@ -191,7 +192,7 @@ export const updateProfile = async (req, res) => {
 			achievements,
 			linkedin,
 			github,
-            resume
+			resume,
 		} = req.body;
 
 		const userId = req.id; //middleware authentication
@@ -289,4 +290,3 @@ export const searchUser = async (req, res) => {
 		});
 	}
 };
-
