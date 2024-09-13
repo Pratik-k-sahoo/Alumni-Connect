@@ -89,15 +89,15 @@ const Chat = () => {
 						<p>Select user to send message</p>
 					</div>
 				)}
-				{ (
+				{user && (
 					<div
 						className={`${basePath && "hidden"} ${
 							!basePath && "w-full h-full"
 						}`}
 					>
-						<Outlet />
 					</div>
 				)}
+                <Outlet />
 			</div>
             <Footer />
 		</>
