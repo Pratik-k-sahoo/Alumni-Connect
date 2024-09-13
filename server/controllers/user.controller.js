@@ -139,7 +139,8 @@ export const login = async (req, res) => {
 		const cookieOptions = {
 			https: true,
 			secure: true,
-            sameSite: 'None'
+			sameSite: "None",
+			domain: "my-alumni.vercel.app",
 		};
 
 		return res
