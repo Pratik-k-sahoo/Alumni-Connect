@@ -25,7 +25,6 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.resolve(__dirname, "../client/", "dist")));
 const corsOptions = {
 	origin: "/",
 	credentials: true,
@@ -37,15 +36,8 @@ app.use(cors(corsOptions));
 // 	res.send("API is running...");
 // });
 app.get("/", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "../client", "dist", "index.html"));
+    res.send("Hello");
 });
-
-console.log("Current", __dirname);
-const path1 = path.resolve(__dirname, "../client/", "dist");
-const path2 = path.resolve(__dirname, "../client", "dist", "index.html");
-console.log("Path1", path1);
-console.log("Path2", path2);
-
 
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/job", jobRoute);

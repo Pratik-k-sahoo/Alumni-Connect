@@ -5,9 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "node index",
-		"dev": "nodemon index",
-		"build": "npm i && cd ../client && npm install && npm run build",
-		"vercel-build": "npm run build"
+		"dev": "nodemon index"
 	},
 	"keywords": [],
 	"author": "",
