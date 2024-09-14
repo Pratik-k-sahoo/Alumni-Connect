@@ -11,10 +11,13 @@ import { PersistGate } from "redux-persist/integration/react";
 const persistor = persistStore(store);
 
 createRoot(document.getElementById("root")).render(
-	<Provider store={store}>
-		<PersistGate loading={null} persistor={persistor}>
-			<App />
-		</PersistGate>
-		<Toaster />
-	</Provider>
+	// <Provider store={store}>
+	// 	<PersistGate loading={null} persistor={persistor}>
+	// 		<App />
+	// 	</PersistGate>
+	// 	<Toaster />
+	// </Provider>
+	<div className="flex w-full h-full items-center justify-center font-bold text-2xl">
+		Site Under Maintainance
+	</div>
 );
